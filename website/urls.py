@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Employees import urls
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('Ownadminers/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('Employees.urls')),
 
 ]
+
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
