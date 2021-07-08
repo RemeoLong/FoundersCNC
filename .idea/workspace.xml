@@ -5,12 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/templates/index/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/website/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,11 +38,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AtticRestorations" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/startbootstrap-sb-admin-2-gh-pages" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\RemeoLong\FoundersCNC" />
+      <recent name="C:\Users\RemeoLong\FoundersCNC\Employees" />
       <recent name="C:\Users\RemeoLong\FoundersCNC\website" />
       <recent name="C:\Users\RemeoLong\FoundersCNC\website\settings" />
       <recent name="C:\Users\RemeoLong\FoundersCNC\root" />
@@ -72,5 +70,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

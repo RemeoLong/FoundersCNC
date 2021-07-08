@@ -23,3 +23,12 @@ class Employees(models.Model):
     roles = models.CharField(max_length=50, choices=roles_choice)
     status = models.CharField(max_length=15, choices=roles_choice)
 
+
+class Model(models.Model):
+    model = models.CharField(max_length=25)
+
+
+class MachineType(models.Model):
+    type = models.CharField(max_length=50)
+
+
