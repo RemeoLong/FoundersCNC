@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae500b2-6e32-4ae5-8db1-ce81ddbcfbc1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/FoundersCNC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FoundersCNC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees/templates/index/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/website/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1su7KKIYopVsUVUXqYxT6FR0009" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -38,7 +45,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/startbootstrap-sb-admin-2-gh-pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Portfolio" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
