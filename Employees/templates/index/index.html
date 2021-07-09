@@ -236,7 +236,7 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="#" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{% static 'images/avatar/6.jpg' %}" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
@@ -244,7 +244,7 @@
 
                             <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                            <a class="nav-link" href="{% url 'logout' %}}"><i class="fa fa-power-off"></i> Logout</a>
+                            <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
                 </div>
@@ -533,12 +533,12 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-6">
+            <div class="col-xl-6 col-lg-6">
                 <section class="card">
                     <div class="twt-feed blue-bg">
                         <div class="media">
                             <a href="#">
-                                <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="{% static '' %}">
+                                <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="{% static 'images/avatar/6.jpg' %}">
                             </a>
                             <div class="media-body">
                                 <h2 class="text-white display-6">Long Tran</h2>
@@ -564,63 +564,13 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="twt-write col-sm-12">
-                        <textarea placeholder="comments" rows="1" class="form-control t-text-area"></textarea>
-                    </div>
                     <footer class="twt-footer">
-                        <a href="#"><i class="fa fa-camera"></i></a>
                         <a href="#"><i class="fa fa-map-marker"></i></a>
                         Houston, TX
-                        <span class="pull-right">
-
-                        </span>
                     </footer>
                 </section>
             </div>
 
-
-            <div class="col-xl-3 col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="stat-widget-one">
-                            <div class="stat-icon dib"><i class="ti-money text-success border-success"></i></div>
-                            <div class="stat-content dib">
-                                <div class="stat-text">Total Profit</div>
-                                <div class="stat-digit">1,012</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-xl-3 col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="stat-widget-one">
-                            <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
-                            <div class="stat-content dib">
-                                <div class="stat-text">New Customer</div>
-                                <div class="stat-digit">961</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="stat-widget-one">
-                            <div class="stat-icon dib"><i class="ti-layout-grid2 text-warning border-warning"></i></div>
-                            <div class="stat-content dib">
-                                <div class="stat-text">Active Projects</div>
-                                <div class="stat-digit">770</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-xl-6">
                 <div class="card">
