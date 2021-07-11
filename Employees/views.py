@@ -21,3 +21,7 @@ def tool_changer(request):
 
 def present(request):
     return render(request, 'index/present.html', {})
+
+
+def db(request):
+    return render(request, 'index/DB.html', {})
