@@ -17,3 +17,7 @@ def weatherford_test_stand(request):
 
 def tool_changer(request):
     return render(request, 'index/tool_changer.html', {})
+
+
+def present(request):
+    return render(request, 'index/present.html', {})

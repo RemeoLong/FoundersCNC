@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae500b2-6e32-4ae5-8db1-ce81ddbcfbc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/files/Founder's CNC.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/CNC Logo.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/CNCLogo.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AtticRestorations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
