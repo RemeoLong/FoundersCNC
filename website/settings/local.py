@@ -10,7 +10,6 @@ INTERNAL_IPS = [
 
 INSTALLED_APPS += [
     #   'debug_toolbar',
-    'localflavor',
 ]
 
 MIDDLEWARE += [

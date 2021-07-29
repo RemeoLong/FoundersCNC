@@ -1,10 +1,7 @@
 from datetime import datetime
 
-import localflavor
 from django.contrib.auth.models import User
 from django.db import models
-
-from localflavor.us.forms import USPSSelect, USStateSelect
 
 
 class Company(models.Model):
@@ -16,8 +13,8 @@ class Location(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=50)
-    state = localflavor.us.forms.USStateField(required=True)
-    zip_code = localflavor.us.forms.USZipCodeField(required=True)
+    state = models.CharField(max_length=50)
+    zip_code = models.IntegerField(max_length=5)
     contact_first_name = models.CharField(max_length=50)
     contact_last_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
@@ -73,8 +70,8 @@ class Employee(models.Model):
     title = models.CharField(max_length=50)
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=20)
-    state = localflavor.us.forms.USStateField(required=True)
-    zip_code = localflavor.us.forms.USZipCodeField(required=True)
+    state = models.CharField(max_length=50)
+    zip_code = models.IntegerField(max_length=5)
     phone_number = models.BigIntegerField()
     status = models.CharField(max_length=15, choices=status_choice)
     created_at = models.DateTimeField(default=datetime.now())
@@ -104,8 +101,8 @@ class Merchant(models.Model):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=50)
-    state = localflavor.us.forms.USStateField(required=True)
-    zip_code = localflavor.us.forms.USZipCodeField(required=True)
+    state = models.CharField(max_length=50)
+    zip_code = models.IntegerField(max_length=5)
     contact_first_name = models.CharField(max_length=50)
     contact_last_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
