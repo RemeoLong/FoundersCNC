@@ -9,11 +9,12 @@ INTERNAL_IPS = [
 ]
 
 INSTALLED_APPS += [
- #   'debug_toolbar',
+    #   'debug_toolbar',
+    'localflavor',
 ]
 
 MIDDLEWARE += [
-#    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 DATABASES = {
@@ -24,3 +25,7 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+STATICFILES_DIRS = (
+     os.path.join('static'),
+)

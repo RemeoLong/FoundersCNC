@@ -5,6 +5,10 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 DEBUG = False
 ALLOWED_HOSTS = []
 
+INSTALLED_APPS += [
+    'localflavor',
+]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -21,3 +25,5 @@ AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 AWS_SES_REGION_NAME = 'us-east-2'
 AWS_SES_REGION_ENDPOINT ='email.us-east-2.amazonaws.com'
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
