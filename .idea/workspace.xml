@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1ae500b2-6e32-4ae5-8db1-ce81ddbcfbc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/tool_changer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/tool_changer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/weatherford_performance_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/weatherford_performance_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/weatherford_test_stand.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/weatherford_test_stand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/website/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AtticRestorations" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Portfolio" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
