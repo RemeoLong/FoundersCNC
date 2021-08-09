@@ -1,58 +1,322 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   {% block title %}<title>{{ user.username }}'s Portal</title> {% endblock %}
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  {% block head %}
-  {% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% block title %}  <title>Employee's Portal</title>  {% endblock %}
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 05%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
 
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
 
-  {% block style %}
-  {% endblock %}
-    </style>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
 
-  {% block body %}
-  {% endblock %}
-</body>
 
-<script>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="{% static 'images/avatar/CNCLogo.PNG' %}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="{% static 'images/avatar/CNCLogo.PNG' %}" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Main</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-first-order"></i>Invoices</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="#">All</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="#">Open</a></li>
+                            <li><i class="fa fa-bars"></i><a href="#">Pending</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="#">Paid</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Over Due</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-address-book"></i>Appointments</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Active</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">Completed</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-calendar"></i>Calendar</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="#">Day</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="#">Week</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="#">Month</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="#">Year</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-calendar"></i>Presentation</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="{% url 'Presentation' %}">Power Point</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="{% url 'DB' %}">Database Design</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title">Machines</h3><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>CME</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">MQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>DMG</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">CTX 1250</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">CTX 410</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMC 100</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMC 125 FD</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMC 50</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMC 65 H</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMF</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMG Siemens Training</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 100 P</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 125</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 200</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 50</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 60 P</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU 80</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMU EVO</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>DMG MORI</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">CMX 1100 V</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DMC 125 FD</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NLX Series</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NVX</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Doosan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">PUMA</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Servo Driver Alarm</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DBC</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Vision DVSD</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">HM 1000</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>HAAS</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="maps-gmap.html">Service Manual</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Hitachi Seiki</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="maps-gmap.html">BS-1652</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Mazak</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Integrex 410 H II</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">QuickTurn 250</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">M640</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Matrix</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Manuals</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Mori Seiki</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">DL</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NL</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NLX</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NMV</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">NT</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">ZL</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>PAMA</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">MYPLC UK</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Soraluce</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">Manuals</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Toyoda</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">FA 630</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">CD FA630</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="#">CD FA630 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Weatherford</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="{% url 'TestStand' %}" target="_blank" rel="noopener noreferrer">Centralizer Test Stand</a></li>
+                            <li><i class="menu-icon fa fa-cogs"></i><a href="{% url 'PerformanceTest' %}" target="_blank" rel="noopener noreferrer">Manual Performance Test</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title">Quick Links</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Maintenance</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-tint"></i><a href="page-login.html">Oils</a></li>
+                            <li><i class="menu-icon fa fa-tint"></i><a href="page-register.html">Grease</a></li>
+                            <li><i class="menu-icon fa fa-tint"></i><a href="pages-forget.html">Coolant</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Tool Changers</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cog"></i><a href="{% url 'ToolChanger' %}" target="_blank" rel="noopener noreferrer">DMU 60 80 P</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bars"></i>Installation Videos</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-cog"></i><a href="{% url 'ToolChanger' %}" target="_blank" rel="noopener noreferrer">Videos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="{% static 'images/avatar/6.jpg' %}" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-center">
+                    <div class="page-title">
+                    {% block header %}    <h1>Dashboard</h1>  {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+          {% block body %}
+          {% endblock %}
+
+          </div>
+    </div>
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+    <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/widgets.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
 
     {% block script %}
     {% endblock %}
-</script>
+    </script>
+
+</body>
+
+</html>

@@ -11,8 +11,12 @@ class LocationAdmin(admin.ModelAdmin):
                     'contact_last_name', 'phone_number')
 
 
-class MachineAdmin(admin.ModelAdmin):
-    list_display = ('company_id', 'brand', 'model')
+class MachineBrandAdmin(admin.ModelAdmin):
+    list_display = ('brand', )
+
+
+class MachineModelAdmin(admin.ModelAdmin):
+    list_display = ('brand', 'model')
 
 
 class RevisionAdmin(admin.ModelAdmin):
@@ -23,12 +27,18 @@ class MachineDocumentAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'document', 'created_at')
 
 
+class MerchantAdmin(admin.ModelAdmin):
+    list_display = ('name', 'address', 'city', 'state', 'zip_code', 'contact_first_name', 'contact_last_name',
+                    'phone_number')
+
+
 admin.site.register(Company, CompanyAdmin)
 admin.site.register(Location, LocationAdmin)
-admin.site.register(Machine, MachineAdmin)
+admin.site.register(MachineBrand, MachineBrandAdmin)
+admin.site.register(MachineModel, MachineModelAdmin)
 admin.site.register(Revision, RevisionAdmin)
 admin.site.register(MachineDocument, MachineDocumentAdmin)
-#admin.site.register(Company, CompanyAdmin)
+admin.site.register(Merchant, MerchantAdmin)
 #admin.site.register(Company, CompanyAdmin)
 #admin.site.register(Company, CompanyAdmin)
 #admin.site.register(Company, CompanyAdmin)

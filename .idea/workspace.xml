@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1ae500b2-6e32-4ae5-8db1-ce81ddbcfbc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/home.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Employees/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employees/templates/index/present.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/present.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/CNCLogo.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/avatar/CNCLogo.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/tool_changer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/tool_changer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/weatherford_performance_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/weatherford_performance_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employees/templates/index/weatherford_test_stand.html" beforeDir="false" afterPath="$PROJECT_DIR$/Employees/templates/index/weatherford_test_stand.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

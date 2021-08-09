@@ -14,26 +14,29 @@ class Location(models.Model):
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
-    zip_code = models.IntegerField(max_length=5)
+    zip_code = models.IntegerField()
     contact_first_name = models.CharField(max_length=50)
     contact_last_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
 
 
-class Machine(models.Model):
-    company_id = models.ForeignKey(Company, on_delete=models.CASCADE)
+class MachineBrand(models.Model):
     brand = models.CharField(max_length=100)
+
+
+class MachineModel(models.Model):
+    brand = models.ForeignKey(MachineBrand, on_delete=models.CASCADE)
     model = models.CharField(max_length=100)
 
 
 class Revision(models.Model):
-    machine_id = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine_id = models.ForeignKey(MachineModel, on_delete=models.CASCADE)
     revision = models.IntegerField()
     file = models.FileField(upload_to='static/revision', blank=True)
 
 
 class MachineDocument(models.Model):
-    machine_id = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine_id = models.ForeignKey(MachineModel, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     document = models.FileField(upload_to='static/machine_documents', null=True)
@@ -41,7 +44,7 @@ class MachineDocument(models.Model):
 
 
 class Manual(models.Model):
-    machine_id = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine_id = models.ForeignKey(MachineModel, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     manual = models.FileField(upload_to='static/manuals', null=True)
     video = models.FileField(upload_to='static/videos', null=True)
@@ -50,7 +53,7 @@ class Manual(models.Model):
 
 class ServiceOrder(models.Model):
     company_id = models.ForeignKey(Company, on_delete=models.CASCADE)
-    machine_id = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine_id = models.ForeignKey(MachineModel, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
     invoice = models.FileField(upload_to='static/invoices', null=True)
     status = models.CharField(max_length=50)
@@ -71,7 +74,7 @@ class Employee(models.Model):
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=20)
     state = models.CharField(max_length=50)
-    zip_code = models.IntegerField(max_length=5)
+    zip_code = models.IntegerField()
     phone_number = models.BigIntegerField()
     status = models.CharField(max_length=15, choices=status_choice)
     created_at = models.DateTimeField(default=datetime.now())
@@ -89,7 +92,7 @@ class EmployeePayStub(models.Model):
 
 class ServiceCall(models.Model):
     company_id = models.ForeignKey(Company, on_delete=models.CASCADE)
-    machine_id = models.ForeignKey(Machine, on_delete=models.CASCADE)
+    machine_id = models.ForeignKey(MachineModel, on_delete=models.CASCADE)
     employees_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
     appointment = models.DateTimeField()
@@ -102,7 +105,7 @@ class Merchant(models.Model):
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
-    zip_code = models.IntegerField(max_length=5)
+    zip_code = models.IntegerField()
     contact_first_name = models.CharField(max_length=50)
     contact_last_name = models.CharField(max_length=50)
     phone_number = models.IntegerField()
